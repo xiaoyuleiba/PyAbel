@@ -24,7 +24,7 @@ import abel
 # https://imagej.nih.gov/ij/
 
 # Specify the path to the file
-filename = os.path.join('data', 'Xenon_ATI_VMI_800_nm_649x519.tif')
+filename = os.path.join('data', 'c:\\Users\\Xiao\\Desktop\\asd')
 
 # Name the output files
 output_image = filename[:-4] + '_Abel_transform.png'

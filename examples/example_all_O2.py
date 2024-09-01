@@ -36,15 +36,15 @@ ntrans = len(transforms)  # number of transforms
 
 
 # Image:   O2- VMI 1024x1024 pixel ------------------
-imagefile = bz2.BZ2File('data/O2-ANU1024.txt.bz2')
+imagefile = open('centered_data.txt', 'r')
 IM = np.loadtxt(imagefile)
 
 # recenter the image to mid-pixel (odd image width, square shape)
-IModd = abel.tools.center.center_image(IM, method="convolution",
+IModd = abel.tools.center.center_image(IM, method="slice",
                                        odd_size=True, square=True)
 
 h, w = IModd.shape
-print("centered image 'data/O2-ANU2048.txt' shape = {:d}x{:d}".format(h, w))
+print("centered image 'centered_data.txt' shape = {:d}x{:d}".format(h, w))
 
 # split image into quadrants
 Q = abel.tools.symmetry.get_image_quadrants(IModd, reorient=True)
