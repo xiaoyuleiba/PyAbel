@@ -15,3 +15,6 @@ dist/
 build/
 doc/_build/
 doc/transform_methods/comparison/fig_benchmarks/working
+**/.DS_Store
+**/._.DS_Store
+.DS_Store
